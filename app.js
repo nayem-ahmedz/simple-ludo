@@ -52,7 +52,7 @@ document.getElementById('replay-btn').addEventListener('click', function(){
 //check if user want to replay
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const urlScore = urlParams.get('highScore');
+    const urlScore = parseInt(urlParams.get('highScore'), 10);
     if(urlScore>0){
         highScore.innerHTML = urlScore;
         hC = urlScore;
