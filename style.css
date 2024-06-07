@@ -6,16 +6,53 @@ body{
     background: linear-gradient(45deg, #ababee, #ceceee);
 }
 section{
-    border-radius: 10px; padding: 20px; text-align: center; background-color: whitesmoke; margin: 15px;
+    border-radius: 10px; padding: 20px 5px; text-align: center; background-color: whitesmoke; margin: 15px; width: 800px;
+}
+main::after{
+    content: ""; clear: both; display: table;
+}
+article.box{
+    width: 50%; float: left; padding: 20px 0;
+}
+.dice-box{
+    border-right: 1px solid;
 }
 section > h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif; color: blue; margin: 0 auto 50px; font-size: 32px;
 }
 #image{
-    width: 160px; height: auto; border-radius: 10px; transition: 0.5s;
+    width: 160px; height: auto; margin-top: 25px; border-radius: 10px; transition: 0.5s;
+}
+
+/* Box 2 */
+#cir-outer{
+    border: 1px solid black; border-radius: 50%; width: 115px; height: 115px; margin: auto auto 20px; padding: 7px; background: conic-gradient(blue 3.5deg, white 0deg);
+}
+.cir-inner{
+    border: 1px solid black; border-radius: 50%; width: 100px; height: 100px; margin: auto; padding-top: 10px; background-color: white;
+}
+.score-txt{
+    color: rgba(0,0,0, 0.8); font-weight: 400;
+}
+span{
+    display: block; margin-top: 5px; font-weight: 900;
+}
+#score{
+    color: black;
+}
+#highest-score{
+    color: green;
+}
+
+/* Bottom */
+.testCases{
+    width: 100%; padding: 10px 0; margin: auto;
+}
+.ch-box{
+    height: 15px; width: 15px; border-radius: 50%; background-color: #abc; display: inline-block; margin: 2px 7px;
 }
 #dice-btn{
-    display: block; padding: 10px 20px; margin: 20px auto 10px; border: 1px solid blue; border-radius: 10px; font-size: 16px;
+    display: block; padding: 10px 20px; margin: 5px auto 10px; border: 1px solid blue; border-radius: 10px; font-size: 16px;
 }
 #dice-btn:hover{
     background-color: blue; color: white;
@@ -24,5 +61,5 @@ section > h1{
     transform: scale(0.85);
 }
 #res{
-    visibility: hidden; margin-top: 50px; opacity: 0.8;
+    visibility: hidden; margin-top: 10px; opacity: 0.8;
 }

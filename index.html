@@ -9,8 +9,33 @@
 <body>
     <section>
         <h1>Simple Ludo Game</h1>
-        <img id="image" src="assets/default.png" alt="default.image">
-        <p id="res">0</p>
+        <main>
+            <article class="box dice-box">
+                <img id="image" src="assets/default.png" alt="default.image">
+                <p id="res">0</p>
+            </article>
+            <article class="box">
+                <div id="cir-outer">
+                    <div class="cir-inner">
+                        <p>Target</p>
+                        <p id="target">0</p>
+                    </div>
+                </div>
+                <h3 class="score-txt">
+                    Your Score <span id="score">00</span>
+                </h3>
+                <h3 class="score-txt">
+                    Highest Score <span id="highest-score">00</span>
+                </h3>
+            </article>
+        </main>
+        <div class="testCases">
+            <div class="ch-box"></div>
+            <div class="ch-box"></div>
+            <div class="ch-box"></div>
+            <div class="ch-box"></div>
+            <div class="ch-box"></div>
+        </div>
         <button id="dice-btn">Roll Dice</button>
     </section>
     <script src="app.js"></script>
