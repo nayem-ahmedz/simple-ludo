@@ -1,7 +1,16 @@
+//check for exisiting high score
+let hC = 0;
+let highScore = document.getElementById('highest-score');
+window.onload = function(){
+    if(localStorage.getItem('highScore')){
+        hC = localStorage.getItem('highScore');
+        highScore.innerHTML = hC;
+    }
+}
+
 let t = 5, score = 0;
 let img = document.getElementById('image');
 let r = true;
-let highScore = document.getElementById('highest-score'), hC = 0;
 let target = 20;
 document.getElementById('target').innerHTML = target;
 let chBox = document.getElementsByClassName('ch-box');
@@ -39,6 +48,7 @@ document.getElementById('dice-btn').addEventListener('click', function(){
     if(t==0){
         if(score>hC){
             hC = score;
+            localStorage.setItem('highScore', hC);
         }
         highScore.innerHTML = hC;
         showMessage(score);
@@ -46,18 +56,18 @@ document.getElementById('dice-btn').addEventListener('click', function(){
 });
 
 document.getElementById('replay-btn').addEventListener('click', function(){
-    document.location = 'index.html?highScore=' + hC;
+    document.location = 'index.html'; // ?highScore=' + hC;
 });
 
-//check if user want to replay
-window.onload = function() {
+
+/* window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const urlScore = parseInt(urlParams.get('highScore'), 10);
     if(urlScore>0){
         highScore.innerHTML = urlScore;
         hC = urlScore;
     }
-}
+} */
 
 //showing score board on result
 function showMessage(score){
